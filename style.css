@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- TEMA ESCURO (Padrão): Tons de tinta clássica e pergaminho escuro --- */
+body {
+  background-image: url("src/assets/ChatGPT\ Image\ 29\ de\ ago.\ de\ 2026\,\ 17_58_32\ \(1\).png");
+  background-repeat: repeat;
+  background-size: 700px auto;
+  background-position: center;
+  font-family: 'Georgia', 'Segoe UI', serif;
+  color: #f3ebd9; /* Creme/Pergaminho */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: clamp(10px, 3vw, 25px);
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.top-bar-left {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  z-index: 10;
+}
+
+.top-bar-right {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  right: clamp(10px, 2vw, 20px);
+  z-index: 10;
+}
+
+/* Botão de Tema */
+.btn-theme {
+  background-color: #2e2627;
+  color: #e6c594; /* Dourado suave */
+  border: 1px solid #4a3b3c;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .btn-theme {
+  background-color: #e8dfd1;
+  color: #4a3b3c;
+  border-color: #d1c2a5;
+}
+
+.btn-theme:hover {
+  transform: translateY(-2px);
+}
+
+.btn-theme:active {
+  transform: translateY(0);
+}
+
+/* Botão Novo Arquivo */
+.btn-add {
+  background: linear-gradient(135deg, #2a6b56, #1c4a3b); /* Verde musgo clássico */
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(42, 107, 86, 0.4);
+}
+
+header {
+  font-family: "Montserrat", sans-serif;
+  margin: clamp(20px, 5vh, 40px) 0;
+  text-align: center;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  color: #14532D; 
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: #14532D; 
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(15px, 2vw, 25px);
+}
+
+.btn {
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: clamp(130px, 18vh, 180px);
+  padding: clamp(20px, 4vh, 40px) 20px;
+  gap: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn i {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.btn:hover {
+  transform: translateY(-6px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-livro {
+  background: linear-gradient(135deg, #801b2c, #54101c);
+}
+
+.btn-quiz {
+  background: linear-gradient(135deg, #1d4ed8, #1a66cc);
+}
+
+.btn-jogo {
+  background: linear-gradient(135deg, #15803d, #14532d);
+}
+
+.btn-link {
+  background: linear-gradient(135deg, #b45309, #78350f);
+}
+
+.btn-jornal {
+  background: linear-gradient(135deg, #15803d, #14532d);
+}
+
+.btn-capa {
+  background: linear-gradient(135deg, #e23b08, #ff1e00);
+}
+
+.btn-top-left {
+  position: absolute;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
+  background: linear-gradient(135deg, #2a6b56, #1c4a3b);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  text-decoration: none;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  z-index: 10;
+}
+
+.btn-top-left:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes para telas muito pequenas (Smartphones compactos) */
+@media (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 60px;
+  }
+
+  .top-bar-left, .top-bar-right {
+    position: static;
+    margin-bottom: 8px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .top-bar-left {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

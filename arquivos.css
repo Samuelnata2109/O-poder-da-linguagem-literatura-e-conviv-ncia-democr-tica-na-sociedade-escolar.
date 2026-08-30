@@ -1,0 +1,194 @@
+body {
+  background-image: url("src/assets/ChatGPT\ Image\ 29\ de\ ago.\ de\ 2026\,\ 20_19_45.png");
+  background-repeat: repeat;
+  background-size: 700px auto;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: clamp(15px, 3vw, 40px);
+}
+
+.container {
+  background: white;
+  padding: clamp(15px, 3vw, 25px);
+  border: 4px solid #1c4a3b;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: clamp(60px, 10vh, 100px);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-top-left {
+  position: absolute;
+  top: clamp(15px, 2vw, 20px);
+  left: clamp(15px, 2vw, 20px);
+  background: linear-gradient(135deg, #2a6b56, #1c4a3b);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 10;
+}
+
+.btn-top-left:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.files-wrapper {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: clamp(10px, 2vw, 20px);
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 15px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+.file-item span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-dark);
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.9rem;
+}
+
+.btn-delete:hover {
+  background: #b52b3a;
+}
+
+.no-files {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-style: italic;
+}
+
+.modal-overlay {
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: white;
+  padding: clamp(16px, 3vw, 24px);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-cancelar {
+  background-color: #e0e0e0;
+}
+
+.btn-confirmar {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* Media query para telas bem pequenas (smartphones compactos) */
+@media (max-width: 480px) {
+  .btn-top-left {
+    position: static;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  body {
+    padding-top: 20px;
+  }
+
+  .container {
+    margin-top: 15px;
+  }
+
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-delete {
+    width: 100%;
+  }
+}

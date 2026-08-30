@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #2e7d32;
+    --primary-light: #4caf50;
+    --primary-dark: #1b5e20;
+    --accent-color: #81c784;
+    --bg-color: #f1f8e9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-radius: 12px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-image: url("src/assets/ChatGPT\ Image\ 29\ de\ ago.\ de\ 2026\,\ 20_19_45.png");
+    background-repeat: repeat;
+    background-size: 700px auto;
+    background-position: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    min-height: 100vh;
+    padding: clamp(10px, 3vw, 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: "Montserrat", sans-serif;
+    max-width: 800px;
+    width: 100%;
+    background: var(--card-bg);
+    padding: clamp(15px, 4vw, 30px);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: clamp(15px, 3vw, 30px);
+    border-bottom: 2px solid #c8e6c9;
+    padding-bottom: clamp(10px, 2vw, 20px);
+}
+
+header h1 {
+    color: var(--primary-dark);
+    margin: 0 0 10px 0;
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+}
+
+header p {
+    color: #666;
+    margin: 0;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.question-card {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: clamp(12px, 3vw, 20px);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.question-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    word-break: break-word;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-label {
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-start;
+    padding: clamp(8px, 2vw, 10px) clamp(10px, 2vw, 15px);
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    word-break: break-word;
+}
+
+.option-label:hover {
+    border-color: var(--accent-color);
+    background: #f4fbf4;
+}
+
+.option-label input {
+    margin-right: 12px;
+    margin-top: 3px;
+    accent-color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.option-label.correct {
+    background-color: #d4edda !important;
+    border-color: #28a745 !important;
+    color: #155724;
+}
+
+.option-label.incorrect {
+    background-color: #f8d7da !important;
+    border-color: #dc3545 !important;
+    color: #721c24;
+}
+
+.actions {
+    text-align: center;
+    margin-top: clamp(20px, 4vw, 30px);
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: clamp(10px, 2.5vw, 12px) clamp(20px, 5vw, 30px);
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 250px;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#result-container {
+    margin-top: 25px;
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+    color: var(--primary-dark);
+    word-break: break-word;
+}
+
+/* Ajustes extras para telas muito compactas */
+@media (max-width: 480px) {
+    body {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
